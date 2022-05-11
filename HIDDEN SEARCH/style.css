@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Montserrat:wght@500;600&family=Roboto:wght@400;500;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+i {
+    pointer-events: none;
+}
+
+body {
+    background-image: linear-gradient(180deg, #756ad6, #41becc);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100vh; 
+    margin: 0;
+    overflow: hidden;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+    flex-direction: row;
+}
+
+
+.input {
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width:50px;
+    border: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.btn {
+    position: absolute;
+    border: 0;
+    background-color: white;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 200px;
+}
+
+.search.active .btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateX(198px);
+}
